@@ -26,15 +26,15 @@
         .inline-select, .inline-date { padding: 2px 4px; border: 1px solid #d1d5db; border-radius: 4px; background-color: white; width: 100%; min-width: 100px; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); font-size: 0.875rem; }
         .inline-select:focus, .inline-date:focus { outline: none; border-color: #3b82f6; box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.4); }
         /* Completed Task Row Styling */
-        .task-table tr.task-completed td { color: #6b7280; background-color: #f9fafb; } /* Subdued colors */
+        .task-table tr.task-completed td { color: #6b7280; background-color: #f9fafb; }
         .task-table tr.task-completed .editable-name,
         .task-table tr.task-completed .inline-select,
-        .task-table tr.task-completed .inline-date { text-decoration: line-through; color: #9ca3af; } /* Lighter line-through */
+        .task-table tr.task-completed .inline-date { text-decoration: line-through; color: #9ca3af; }
         .task-table tr.task-completed .inline-select,
         .task-table tr.task-completed .inline-date { background-color: #f9fafb; }
         .task-table tr.task-completed .editable-name { display: block; }
-        .task-table tr.task-completed .timestamp-cell { color: #9ca3af; } /* Lighter timestamp */
-        .task-table tr.task-completed .drive-link-cell button { color: #60a5fa; } /* Slightly lighter blue */
+        .task-table tr.task-completed .timestamp-cell { color: #9ca3af; }
+        .task-table tr.task-completed .drive-link-cell button { color: #60a5fa; }
          .task-table tr.task-completed .drive-link-cell button:hover { color: #3b82f6; }
 
         .timestamp-cell { font-size: 0.75rem; color: #6b7280; }
@@ -51,60 +51,28 @@
         .summary-tile .see-tasks-btn { font-size: 0.75rem; color: #3b82f6; text-decoration: underline; cursor: pointer; align-self: flex-start; margin-top: auto; background: none; border: none; padding: 0; }
         .summary-tile .see-tasks-btn:hover { color: #1d4ed8; }
         #weekly-calendar-view #calendar-days {
-    display: grid;
-    grid-template-columns: repeat(14, minmax(0, 1fr)); /* Create 14 equal width columns */
-    gap: 0.5rem; /* Adjust gap as needed */
-    overflow-x: auto; /* Enable horizontal scrolling if needed on smaller screens */
-}
-
-.calendar-day-box {
-    background-color: #fff;
-    border: 1px solid #e5e7eb;
-    border-radius: 0.375rem;
-    padding: 0.5rem;
-    text-align: center;
-    min-height: 70px; /* Adjust min-height as needed */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
-}
-
-.calendar-day-name {
-    font-size: 0.75rem;
-    color: #6b7280;
-    font-weight: 500;
-    margin-bottom: 0.2rem; /* Adjust spacing */
-}
-
-.calendar-day-date {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 0.2rem; /* Adjust spacing */
-}
-
-.calendar-day-count {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #3b82f6;
-    margin-bottom: 0.2rem; /* Adjust spacing */
-}
-
-.calendar-day-box .see-tasks-btn {
-    font-size: 0.7rem;
-    color: #3b82f6;
-    text-decoration: underline;
-    cursor: pointer;
-    margin-top: 0.3rem; /* Adjust spacing */
-    background: none;
-    border: none;
-    padding: 0;
-}
-
-.calendar-day-box .see-tasks-btn:hover {
-    color: #1d4ed8;
-}
+            display: grid;
+            grid-template-columns: repeat(14, minmax(0, 1fr));
+            gap: 0.5rem;
+            overflow-x: auto;
+        }
+        .calendar-day-box {
+            background-color: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.375rem;
+            padding: 0.5rem;
+            text-align: center;
+            min-height: 70px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .calendar-day-name { font-size: 0.75rem; color: #6b7280; font-weight: 500; margin-bottom: 0.2rem; }
+        .calendar-day-date { font-size: 0.9rem; font-weight: 600; color: #1f2937; margin-bottom: 0.2rem; }
+        .calendar-day-count { font-size: 1.1rem; font-weight: 600; color: #3b82f6; margin-bottom: 0.2rem; }
+        .calendar-day-box .see-tasks-btn { font-size: 0.7rem; color: #3b82f6; text-decoration: underline; cursor: pointer; margin-top: 0.3rem; background: none; border: none; padding: 0; }
+        .calendar-day-box .see-tasks-btn:hover { color: #1d4ed8; }
         #drive-file-list-section { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #e5e7eb; }
         #drive-file-list { max-height: 150px; overflow-y: auto; border: 1px solid #e5e7eb; border-radius: 0.25rem; padding: 0.5rem; background-color: #f9fafb; }
         #drive-file-list div { display: flex; justify-content: space-between; align-items: center; padding: 0.25rem 0; font-size: 0.875rem; gap: 0.5rem; }
@@ -115,6 +83,15 @@
         .text-button:hover { color: #1d4ed8; }
         .sort-icon { font-size: 0.7em; margin-left: 4px; color: #9ca3af; cursor: pointer; }
         .sort-icon.active { color: #374151; }
+        #comment-section { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e5e7eb; }
+        #comment-list { max-height: 200px; overflow-y: auto; border: 1px solid #e5e7eb; border-radius: 0.25rem; padding: 0.75rem; background-color: #f9fafb; margin-bottom: 0.75rem; }
+        .comment-item { background-color: #fff; padding: 0.5rem 0.75rem; border-radius: 0.25rem; margin-bottom: 0.5rem; box-shadow: 0 1px 2px rgba(0,0,0,0.05); font-size: 0.875rem; }
+        .comment-item:last-child { margin-bottom: 0; }
+        .comment-meta { font-size: 0.75rem; color: #6b7280; margin-bottom: 0.25rem; }
+        .comment-user { font-weight: 600; color: #374151; }
+        .comment-text { color: #1f2937; white-space: pre-wrap; word-wrap: break-word; }
+        #add-comment-form { display: flex; gap: 0.5rem; }
+        #new-comment-input { flex-grow: 1; }
     </style>
 </head>
 <body class="min-h-screen p-4 sm:p-6">
@@ -128,7 +105,7 @@
 
         <div id="weekly-nav-controls" class="flex justify-center items-center gap-4 my-4"> <button id="prev-week-btn" class="px-3 py-1 bg-gray-200 text-gray-700 rounded hover:bg-gray-300 text-sm">&lt; Prev</button> <span class="font-semibold text-gray-800 text-sm" id="calendar-week-num">Week #</span> <button id="next-week-btn" class="px-3 py-1 bg-gray-200 text-gray-700 rounded hover:bg-gray-300 text-sm">Next &gt;</button> </div>
 
-        <div id="weekly-calendar-view" class="mb-8"> <h2 class="text-lg font-semibold mb-3 text-gray-700">Outstanding Calendar (<span id="calendar-week-title">Week</span>)</h2> <div id="calendar-days" class="grid grid-cols-7 gap-2"> </div> <p id="calendar-loading" class="text-center italic text-gray-500 py-4 hidden">Loading...</p> </div>
+        <div id="weekly-calendar-view" class="mb-8"> <h2 class="text-lg font-semibold mb-3 text-gray-700">Outstanding Calendar (<span id="calendar-week-title">2 Week</span>)</h2> <div id="calendar-days" class="grid grid-cols-7 gap-2"> </div> <p id="calendar-loading" class="text-center italic text-gray-500 py-4 hidden">Loading...</p> </div>
 
         <form id="task-form" class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-3 mb-6 items-end"> <div class="flex flex-col"> <label for="task-input" class="text-sm font-medium text-gray-600 mb-1">Task Name</label> <input type="text" id="task-input" placeholder="Task name (required)" required class="px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm text-sm"/> </div> <div class="flex flex-col"> <label for="group-input" class="text-sm font-medium text-gray-600 mb-1">Group</label> <select id="group-input" class="px-3 py-2 border border-gray-300 rounded-md bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm text-sm"> </select> </div> <div class="flex flex-col"> <label for="status-input" class="text-sm font-medium text-gray-600 mb-1">Status</label> <select id="status-input" required class="px-3 py-2 border border-gray-300 rounded-md bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm text-sm"> </select> </div> <div class="flex flex-col"> <div class="flex justify-between items-center mb-1"> <label for="due-date-input" class="text-sm font-medium text-gray-600">Due Date</label> <button type="button" id="set-due-today-btn" class="text-button text-xs">Today</button> </div> <input type="date" id="due-date-input" required class="px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm text-sm"/> </div> <div class="flex flex-col"> <label for="dri-input" class="text-sm font-medium text-gray-600 mb-1">DRI</label> <select id="dri-input" required class="px-3 py-2 border border-gray-300 rounded-md bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm text-sm"> </select> </div> <div class="col-span-full sm:col-span-1 md:col-span-1 md:col-start-5"> <button type="submit" class="w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1 text-sm">Add Task</button> </div> </form>
 
@@ -148,28 +125,63 @@
             </table>
         </div>
 
-    </div>
-
-    <div id="group-modal" class="hidden fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 modal-overlay"> <div class="bg-white w-full max-w-md p-6 rounded-lg shadow-xl modal-content flex flex-col"> <h3 class="text-xl font-semibold mb-4 text-gray-800">Manage Groups</h3> <div class="flex gap-2 mb-4"> <input type="text" id="new-group-input" placeholder="New group name" class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent" aria-label="New Group Name"/> <button id="add-group-btn" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1">Add</button> </div> <p class="text-sm text-gray-600 mb-2">Select default group:</p> <ul id="group-list" class="mb-4 space-y-1 overflow-y-auto border border-gray-200 rounded-md p-3 custom-scrollbar flex-grow" style="min-height: 150px;"></ul> <div class="text-right mt-4 flex-shrink-0"> <button id="close-group-modal-btn" class="px-4 py-2 bg-gray-300 text-gray-800 rounded-md hover:bg-gray-400 transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-1">Close</button> </div> </div> </div>
+    </div> <div id="group-modal" class="hidden fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 modal-overlay"> <div class="bg-white w-full max-w-md p-6 rounded-lg shadow-xl modal-content flex flex-col"> <h3 class="text-xl font-semibold mb-4 text-gray-800">Manage Groups</h3> <div class="flex gap-2 mb-4"> <input type="text" id="new-group-input" placeholder="New group name" class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent" aria-label="New Group Name"/> <button id="add-group-btn" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1">Add</button> </div> <p class="text-sm text-gray-600 mb-2">Select default group:</p> <ul id="group-list" class="mb-4 space-y-1 overflow-y-auto border border-gray-200 rounded-md p-3 custom-scrollbar flex-grow" style="min-height: 150px;"></ul> <div class="text-right mt-4 flex-shrink-0"> <button id="close-group-modal-btn" class="px-4 py-2 bg-gray-300 text-gray-800 rounded-md hover:bg-gray-400 transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-1">Close</button> </div> </div> </div>
     <div id="status-modal" class="hidden fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 modal-overlay"> <div class="bg-white w-full max-w-md p-6 rounded-lg shadow-xl modal-content flex flex-col"> <h3 class="text-xl font-semibold mb-4 text-gray-800">Manage Statuses</h3> <div class="flex gap-2 mb-4"> <input type="text" id="new-status-input" placeholder="New status name" class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent" aria-label="New Status Name"/> <button id="add-status-btn" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1">Add</button> </div> <p class="text-sm text-gray-600 mb-2">Select default status:</p> <ul id="status-list" class="mb-4 space-y-1 overflow-y-auto border border-gray-200 rounded-md p-3 custom-scrollbar flex-grow" style="min-height: 150px;"></ul> <div class="text-right mt-4 flex-shrink-0"> <button id="close-status-modal-btn" class="px-4 py-2 bg-gray-300 text-gray-800 rounded-md hover:bg-gray-400 transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-1">Close</button> </div> </div> </div>
     <div id="user-modal" class="hidden fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 modal-overlay"> <div class="bg-white w-full max-w-sm p-6 rounded-lg shadow-xl modal-content"> <h3 class="text-xl font-semibold mb-4 text-gray-800">Select Your User</h3> <select id="user-select" class="w-full px-3 py-2 border border-gray-300 rounded-md mb-4 bg-white focus:ring-2 focus:ring-blue-500 focus:border-transparent" aria-label="Select User"></select> <div class="flex gap-2 mb-4"> <input type="text" id="new-user-input" placeholder="New user name" class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent" aria-label="New User Name"/> <button id="add-user-btn" class="bg-blue-600 text-white px-3 py-2 rounded-md hover:bg-blue-700 transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1">Add</button> </div> <div class="text-right"> <button id="set-user-btn" class="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-1">Set User</button> </div> </div> </div>
-    <div id="edit-task-modal" class="hidden fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 modal-overlay"> <div class="bg-white w-full max-w-lg p-6 rounded-lg shadow-xl modal-content"> <h3 class="text-xl font-semibold mb-5 text-gray-800">Task Files & Actions</h3> <input type="hidden" id="edit-task-id"> <input type="hidden" id="edit-task-folder-id"> <p class="mb-4 text-sm text-gray-600">Task: <strong id="edit-modal-task-name"></strong></p> <div id="drive-folder-section"> <label class="block text-sm font-medium text-gray-700 mb-1">Google Drive Folder</label> <div id="drive-folder-link-display" class="text-sm mb-2"> <span class="text-gray-500 italic">Checking...</span> </div> <button type="button" id="drive-folder-btn" class="w-full sm:w-auto bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 text-sm"> Open / Create Task Folder </button> <p class="text-xs text-gray-500 mt-1">Creates/opens folder named after Task ID.</p> </div> <div id="drive-file-list-section" class="mt-4"> <label class="block text-sm font-medium text-gray-700 mb-1">Files in Folder</label> <div id="drive-file-list" class="custom-scrollbar"> <span class="text-gray-500 italic p-2 block">No folder linked or files found.</span> </div> </div> <input type="hidden" id="edit-task-name-hidden"> <div class="mt-6 text-right space-x-3"> <button type="button" id="cancel-edit-btn" class="px-4 py-2 bg-gray-300 text-gray-800 rounded-md hover:bg-gray-400">Close</button> </div> </div> </div>
+
+    <div id="edit-task-modal" class="hidden fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 modal-overlay">
+        <div class="bg-white w-full max-w-lg p-6 rounded-lg shadow-xl modal-content">
+            <h3 class="text-xl font-semibold mb-5 text-gray-800">Task Details & Actions</h3>
+            <input type="hidden" id="edit-task-id">
+            <input type="hidden" id="edit-task-folder-id">
+            <p class="mb-4 text-sm text-gray-600">Task: <strong id="edit-modal-task-name"></strong></p>
+            <div id="drive-folder-section">
+                <label class="block text-sm font-medium text-gray-700 mb-1">Google Drive Folder</label>
+                <div id="drive-folder-link-display" class="text-sm mb-2"> <span class="text-gray-500 italic">Checking...</span> </div>
+                <button type="button" id="drive-folder-btn" class="w-full sm:w-auto bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-1 text-sm"> Open / Create Task Folder </button>
+                <p class="text-xs text-gray-500 mt-1">Creates/opens folder named after Task ID.</p>
+            </div>
+            <div id="drive-file-list-section" class="mt-4">
+                <label class="block text-sm font-medium text-gray-700 mb-1">Files in Folder</label>
+                <div id="drive-file-list" class="custom-scrollbar"> <span class="text-gray-500 italic p-2 block">No folder linked or files found.</span> </div>
+            </div>
+            <div id="comment-section">
+                 <label class="block text-sm font-medium text-gray-700 mb-1">Comments</label>
+                 <div id="comment-list" class="custom-scrollbar"> <span class="text-gray-500 italic p-2 block">Loading comments...</span> </div>
+                 <form id="add-comment-form">
+                    <input type="text" id="new-comment-input" placeholder="Add a comment..." required class="px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm text-sm"/>
+                    <button type="submit" id="add-comment-btn" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1 text-sm">Add</button>
+                 </form>
+            </div>
+            <input type="hidden" id="edit-task-name-hidden">
+            <div class="mt-6 text-right space-x-3"> <button type="button" id="cancel-edit-btn" class="px-4 py-2 bg-gray-300 text-gray-800 rounded-md hover:bg-gray-400">Close</button> </div>
+        </div>
+    </div>
 
     <script>
     document.addEventListener('DOMContentLoaded', () => {
         // --- Configuration ---
-        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyhyIpMmiejJmYUllZPYUZvkgKZhYMT_yUK2bcqZif-dz15ruZViZfClVG6Whli8AtI/exec'; // KEEP URL
-        if (SCRIPT_URL.includes('PASTE_YOUR') || !SCRIPT_URL.includes('/exec')) { alert("ERROR: Update SCRIPT_URL."); return; }
+        // !!! --- PASTE YOUR NEW DEPLOYED WEB APP URL HERE --- !!!
+        const SCRIPT_URL = 'YOUR_DEPLOYED_SCRIPT_URL_HERE';
+        // !!! --- END SCRIPT URL --- !!!
+        if (SCRIPT_URL.includes('YOUR_DEPLOYED') || !SCRIPT_URL.includes('/exec')) {
+             alert("CRITICAL ERROR: Please paste your deployed Apps Script Web App URL into the SCRIPT_URL variable in the index.html file.");
+             document.body.innerHTML = '<h1 style="color: red; text-align: center; margin-top: 50px;">Configuration Error: SCRIPT_URL not set correctly in index.html</h1>';
+             return;
+        }
 
         // --- State ---
         let tasks = []; let groups = []; let users = []; let statuses = [];
-        let currentUser = localStorage.getItem('currentUser') || ''; let defaultGroup = localStorage.getItem('defaultGroup') || ''; let defaultStatus = localStorage.getItem('defaultStatus') || '';
+        let currentUser = localStorage.getItem('currentUser') || ''; // Load initially
+        let defaultGroup = localStorage.getItem('defaultGroup') || '';
+        let defaultStatus = localStorage.getItem('defaultStatus') || '';
         let currentView = localStorage.getItem('currentView') || 'all';
         let currentCalendarDate = new Date();
         let calendarChartInstance = null;
         let activeFilter = { type: null, date: null, description: 'All Tasks' };
         let currentSort = { column: 'dueDate', direction: 'asc' };
-        let showCompletedTasks = localStorage.getItem('showCompletedTasks') === 'true'; // NEW state
+        let showCompletedTasks = localStorage.getItem('showCompletedTasks') === 'true';
+        let currentComments = [];
 
         // --- DOM References ---
         // (Existing refs...)
@@ -187,20 +199,24 @@
         const clearTaskFilterBtn = document.getElementById('clear-task-filter-btn');
         const summaryTilesContainer = document.querySelector('.summary-tiles-container');
         const tableSearchInput = document.getElementById('table-search-input');
-        const toggleCompletedBtn = document.getElementById('toggle-completed-btn'); // NEW button ref
-
+        const toggleCompletedBtn = document.getElementById('toggle-completed-btn');
+        const commentSection = document.getElementById('comment-section');
+        const commentList = document.getElementById('comment-list');
+        const addCommentForm = document.getElementById('add-comment-form');
+        const newCommentInput = document.getElementById('new-comment-input');
+        const addCommentBtn = document.getElementById('add-comment-btn');
 
         // --- Loading Indicator ---
-        const showLoading = (el, msg = 'Loading...') => { if(!el) return; if (el.tagName === 'TBODY') { const cols = el.closest('table')?.querySelector('thead tr')?.children.length || 10; el.innerHTML = `<tr><td colspan="${cols}" class="text-center italic p-4 text-gray-500">${msg}</td></tr>`; } else if (el.id === 'calendar-days' || el.id === 'drive-file-list') { el.innerHTML = `<p class="text-center italic text-gray-500 p-4">${msg}</p>`; } else { el.innerHTML = `<li class="italic text-gray-500">${msg}</li>`; } };
+        const showLoading = (el, msg = 'Loading...') => { if(!el) return; if (el.tagName === 'TBODY') { const cols = el.closest('table')?.querySelector('thead tr')?.children.length || 10; el.innerHTML = `<tr><td colspan="${cols}" class="text-center italic p-4 text-gray-500">${msg}</td></tr>`; } else if (el.id === 'calendar-days' || el.id === 'drive-file-list' || el.id === 'comment-list') { el.innerHTML = `<p class="text-center italic text-gray-500 p-4">${msg}</p>`; } else if (el.tagName === 'UL' || el.tagName === 'DIV') { el.innerHTML = `<p class="text-center italic text-gray-500 p-4">${msg}</p>`; } else { el.innerHTML = `<li class="italic text-gray-500">${msg}</li>`; } };
         const showGlobalLoading = (msg = 'Syncing...') => { let i = document.getElementById('global-loading-indicator'); if (!i) { i = document.createElement('div'); i.id = 'global-loading-indicator'; Object.assign(i.style, { position: 'fixed', top: '10px', left: '50%', transform: 'translateX(-50%)', background: 'rgba(0,0,0,0.7)', color: 'white', padding: '5px 15px', borderRadius: '5px', zIndex: '1000', fontSize: '0.9em' }); document.body.appendChild(i); } i.textContent = msg; i.style.display = 'block'; };
         const hideGlobalLoading = () => { const i = document.getElementById('global-loading-indicator'); if (i) i.style.display = 'none'; };
 
         // --- API Interaction ---
-        // callAppsScript remains the same
         async function callAppsScript(method, params = {}) {
            showGlobalLoading(method === 'GET' ? 'Fetching...' : 'Syncing...');
            const isPost = method === 'POST'; const url = SCRIPT_URL; const options = { method: method, redirect: 'follow' };
            let finalUrl = url; let payload;
+           // Always pass currentUser from the JS variable for backend context
            if (isPost) { options.headers = { 'Content-Type': 'text/plain;charset=utf-8' }; payload = { ...params, currentUser: currentUser }; options.body = JSON.stringify(payload); }
            else { payload = { ...params, currentUser: currentUser }; const searchParams = new URLSearchParams(payload); finalUrl = `${url}?${searchParams.toString()}`; }
            try {
@@ -218,20 +234,47 @@
            if (calendarChartInstance) calendarChartInstance.destroy(); calendarChartInstance = null;
            chartLoadingIndicator.classList.remove('hidden'); calendarChartCanvas.classList.add('hidden');
            try {
-               defaultGroup = localStorage.getItem('defaultGroup') || ''; defaultStatus = localStorage.getItem('defaultStatus') || ''; currentUser = localStorage.getItem('currentUser') || ''; currentView = localStorage.getItem('currentView') || 'all';
-               showCompletedTasks = localStorage.getItem('showCompletedTasks') === 'true'; // Load state
+               // Load preferences from storage first
+               defaultGroup = localStorage.getItem('defaultGroup') || '';
+               defaultStatus = localStorage.getItem('defaultStatus') || '';
+               currentUser = localStorage.getItem('currentUser') || ''; // Load stored user
+               currentView = localStorage.getItem('currentView') || 'all';
+               showCompletedTasks = localStorage.getItem('showCompletedTasks') === 'true';
 
                const data = await callAppsScript('GET', { action: 'getAllData' });
-               tasks = data.tasks || []; groups = data.groups || []; users = data.users || []; statuses = data.statuses || [];
+               tasks = data.tasks || [];
+               groups = data.groups || [];
+               users = data.users || [];
+               statuses = data.statuses || [];
+
+               // Validate defaults against fetched lists
                if (defaultGroup && !groups.includes(defaultGroup)) { defaultGroup = ''; localStorage.removeItem('defaultGroup'); }
                if (defaultStatus && !statuses.includes(defaultStatus)) { defaultStatus = ''; localStorage.removeItem('defaultStatus'); }
-               if (currentUser && !users.some(u => u.toLowerCase() === currentUser.toLowerCase())) { try { await apiAddUser(currentUser); users.push(currentUser); users.sort((a,b) => a.toLowerCase().localeCompare(b.toLowerCase())); } catch (addError) { console.error(`Failed auto-add user "${currentUser}":`, addError); } }
-               const validUser = users.some(u => u.toLowerCase() === currentUser.toLowerCase()); if (!currentUser || !validUser) { currentUser = users[0] || ''; localStorage.setItem('currentUser', currentUser); }
-               renderAll(); // Includes initial sort and applying showCompletedTasks filter
+
+               // --- MODIFIED: Handle user found in storage but not in sheet list ---
+               if (currentUser && !users.some(u => u.toLowerCase() === currentUser.toLowerCase())) {
+                   try {
+                       console.log(`User "${currentUser}" found in storage but not in sheet. Attempting to add...`);
+                       await apiAddUser(currentUser); // Try adding them to the sheet
+                       users.push(currentUser); // Assume success for now, update UI
+                       users.sort((a,b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+                       console.log(`Auto-added user "${currentUser}" from local storage.`);
+                   } catch (addError) {
+                       // If adding fails (e.g., duplicate check on backend if stricter), clear the invalid user
+                       console.error(`Failed to auto-add user "${currentUser}" from storage:`, addError);
+                       currentUser = ''; // Clear the invalid user from JS
+                       localStorage.removeItem('currentUser'); // Clear from storage too
+                   }
+               }
+               // --- User validity check and modal opening will happen AFTER fetchData completes ---
+
+               renderAll(); // Render with potentially updated user list
            } catch (error) {
                const cols = taskTableBody.closest('table')?.querySelector('thead tr')?.children.length || 10;
                taskTableBody.innerHTML = `<tr><td colspan="${cols}" class="text-center italic p-4 text-red-500">Failed load data. Error: ${error.message}</td></tr>`;
                updateSummaryTiles(tasks, currentCalendarDate); calendarLoadingIndicator.textContent = 'Failed.'; chartLoadingIndicator.textContent = 'Failed.';
+               // Don't proceed to user check if initial fetch fails
+               throw error; // Re-throw error to be caught by the caller
            } finally {
                 if (!calendarLoadingIndicator.textContent.includes('Failed')) calendarLoadingIndicator.classList.add('hidden');
                 if (!chartLoadingIndicator.textContent.includes('Failed')) { chartLoadingIndicator.classList.add('hidden'); calendarChartCanvas.classList.remove('hidden'); }
@@ -239,7 +282,6 @@
         };
 
         // --- API Call Functions ---
-        // (Assume these are correct as provided before)
         const apiAddTask = async (d) => await callAppsScript('POST', { action: 'addTask', payload: d });
         const apiUpdateTask = async (id, u) => await callAppsScript('POST', { action: 'updateTask', payload: { id, updates: u } });
         const apiDeleteTask = async (id) => await callAppsScript('POST', { action: 'deleteTask', payload: { id } });
@@ -250,9 +292,10 @@
         const apiDeleteStatus = async (n) => await callAppsScript('POST', { action: 'deleteStatus', payload: { name: n } });
         const apiGetOrCreateFolder = async (taskId, taskName) => await callAppsScript('POST', { action: 'getOrCreateTaskFolder', payload: { taskId, taskName } });
         const apiGetFolderFiles = async (folderId) => await callAppsScript('GET', { action: 'getFolderFiles', folderId: folderId });
+        const apiGetComments = async (taskId) => await callAppsScript('GET', { action: 'getCommentsForTask', taskId: taskId });
+        const apiAddComment = async (taskId, commentText) => await callAppsScript('POST', { action: 'addComment', payload: { taskId, commentText } });
 
         // --- Date/Time/Format Helpers ---
-        // (Assume these are correct as provided before)
         function getLocalDate(ds) { if (!ds || !/^\d{4}-\d{2}-\d{2}$/.test(ds)) return null; const p = ds.split('-'); const d = new Date(parseInt(p[0]), parseInt(p[1])-1, parseInt(p[2])); return (isNaN(d.getTime()) || d.getDate() !== parseInt(p[2])) ? null : d; }
         function getStartOfDay(d) { const s = new Date(d); s.setHours(0,0,0,0); return s; }
         function getStartOfWeek(d) { const cd = new Date(d); const day = cd.getDay(); const diff = cd.getDate() - day + (day===0?-6:1); return new Date(cd.setDate(diff)); }
@@ -260,10 +303,8 @@
         function formatDateForDisplay(d, op = { month: 'short', day: 'numeric' }) { return (!(d instanceof Date) || isNaN(d)) ? '' : d.toLocaleDateString(undefined, op); }
         function formatDateToYMD(d) { return (!(d instanceof Date) || isNaN(d)) ? '' : d.toISOString().split('T')[0]; }
         function formatBytes(b, dec=2) { if (!+b) return '0 Bytes'; const k=1024; const dm=dec<0?0:dec; const s=['Bytes', 'KB', 'MB', 'GB', 'TB']; if(b<1) return b+' Bytes'; const i=Math.min(Math.floor(Math.log(b)/Math.log(k)), s.length-1); return `${parseFloat((b/Math.pow(k,i)).toFixed(dm))} ${s[i]}`; }
-        function formatTimestamp(iso) { if (!iso) return 'N/A'; try { const d=new Date(iso); return isNaN(d.getTime()) ? 'Invalid' : `${d.toLocaleDateString(undefined, {month:'numeric', day:'numeric'})}, ${d.toLocaleTimeString(undefined, {hour:'numeric', minute:'2-digit'})}`; } catch (e) { return 'Error'; } }
+        function formatTimestamp(iso) { if (!iso) return 'N/A'; try { const d=new Date(iso); return isNaN(d.getTime()) ? 'Invalid' : `${d.toLocaleDateString(undefined, {year: 'numeric', month:'short', day:'numeric'})}, ${d.toLocaleTimeString(undefined, {hour:'numeric', minute:'2-digit'})}`; } catch (e) { return 'Error'; } }
         function formatDate(ds) { if (!ds) return 'No Date'; try { const d=getLocalDate(ds); return !d ? 'Invalid' : d.toLocaleDateString(undefined, {month:'short', day:'numeric', year:'numeric'}); } catch (e) { console.error("Err fmt:", ds, e); return 'Error'; } }
-
-        // --- File Type Helper ---
         function getFileTypeDisplay(mimeType) { if (!mimeType) return 'File'; if (mimeType.includes('google-apps.document')) return 'GDoc'; if (mimeType.includes('google-apps.spreadsheet')) return 'GSheet'; if (mimeType.includes('google-apps.presentation')) return 'GSlide'; if (mimeType.includes('google-apps.folder')) return 'Folder'; if (mimeType.includes('pdf')) return 'PDF'; if (mimeType.startsWith('image/')) return 'Image'; if (mimeType.startsWith('video/')) return 'Video'; if (mimeType.startsWith('audio/')) return 'Audio'; if (mimeType.includes('zip') || mimeType.includes('compressed')) return 'ZIP'; if (mimeType.includes('text/plain')) return 'Text'; if (mimeType.includes('csv')) return 'CSV'; return 'File'; }
 
         // --- Summary Tile Update ---
@@ -280,7 +321,6 @@
         }
 
         // --- Rendering Functions ---
-        // (renderSelectOptions, renderGroupOptions, etc. remain the same)
         function renderSelectOptions(sel, items, phEnable, phText, mgEnable, mgVal, mgText, curSel, defVal, addSelf = false) { const oVal = sel.value; sel.innerHTML = ''; if (phEnable) { const o = document.createElement('option'); o.value = ""; o.textContent = phText; o.disabled = !items.includes(""); o.selected = true; sel.appendChild(o); } items.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase())); let selfAdded = false; if (addSelf && currentUser && items.some(i => i.toLowerCase() === currentUser.toLowerCase())) { const o = document.createElement('option'); o.value = currentUser; o.textContent = currentUser + " (Me)"; sel.appendChild(o); selfAdded = true; } items.forEach(item => { if (addSelf && item.toLowerCase() === currentUser.toLowerCase()) return; const o = document.createElement('option'); o.value = item; o.textContent = item === "" ? (sel.id.includes('group') ? "No Group" : item) : item; sel.appendChild(o); }); if (mgEnable) { const o = document.createElement('option'); o.value = mgVal; o.textContent = mgText; sel.appendChild(o); } const avail = Array.from(sel.options).map(o => o.value); let vSet = null; const chk = (v) => (v !== null && v !== undefined && avail.includes(String(v)) && v !== mgVal) ? String(v) : null; vSet = chk(curSel) ?? chk(oVal) ?? chk(defVal); if (vSet === null && addSelf && selfAdded) vSet = currentUser; if (vSet === null && phEnable) vSet = ""; if (vSet === null && !phEnable && items.length > 0) vSet = items[0]; sel.value = vSet ?? ''; }
         function renderGroupOptions(tgt = groupSelect, mg = true, cur = null) { renderSelectOptions(tgt, ['', ...groups], false, "", mg, '__manage_group', '⚙️ Manage groups...', cur, defaultGroup); }
         function renderStatusOptions(tgt = statusInput, mg = true, cur = null) { renderSelectOptions(tgt, statuses, true, "-- Select Status --", mg, '__manage_status', '⚙️ Manage statuses...', cur, defaultStatus); }
@@ -290,10 +330,9 @@
         function renderUserOptions() { userSelect.innerHTML = ''; if (users.length === 0) { const o=document.createElement('option');o.value='';o.textContent='-- No users --';userSelect.appendChild(o);userSelect.disabled=true;}else{userSelect.disabled=false;users.forEach(u=>{const o=document.createElement('option');o.value=u;o.textContent=u;userSelect.appendChild(o);});userSelect.value=currentUser;} }
         function updateCurrentUserDisplay() { if (currentUserDisplay) currentUserDisplay.textContent = currentUser || 'No User Set'; }
 
-
-        // Task Table Rendering (Updates for Group width and Drive button)
+        // Task Table Rendering
         function renderTasks(tasksToRender) {
-            taskTableBody.innerHTML = ''; // Clear existing rows
+            taskTableBody.innerHTML = '';
             taskTableHeader.querySelectorAll('th[data-sort]').forEach(th => { const icon = th.querySelector('.sort-icon'); if (!icon) return; const column = th.dataset.sort; icon.className = 'sort-icon fas'; if (column === currentSort.column) { icon.classList.add(currentSort.direction === 'asc' ? 'fa-sort-up' : 'fa-sort-down', 'active'); } else { icon.classList.add('fa-sort'); } });
 
             if (tasksToRender.length === 0) {
@@ -305,189 +344,103 @@
                     if (!task.id) return;
                     const tr = document.createElement('tr'); tr.dataset.id = task.id; if (task.completed) tr.classList.add('task-completed');
                     const createCell = (content, className = '') => { const td = document.createElement('td'); td.className = className; if (content instanceof Node) td.appendChild(content); else td.textContent = content; return td; };
-
-                    // Editable fields
                     const nameSpan=document.createElement('span'); nameSpan.className='editable-name'; nameSpan.contentEditable=true; nameSpan.textContent=task.name; nameSpan.dataset.field='name'; nameSpan.addEventListener('blur', handleInlineEdit); nameSpan.addEventListener('keypress', (e)=>{if(e.key==='Enter'){e.preventDefault(); e.target.blur();}});
                     const groupSel=document.createElement('select'); groupSel.className='inline-select'; groupSel.dataset.field='group'; renderGroupOptions(groupSel, false, task.group); groupSel.addEventListener('change', handleInlineEdit);
                     const statusSel=document.createElement('select'); statusSel.className='inline-select'; statusSel.dataset.field='status'; renderStatusOptions(statusSel, false, task.status); statusSel.addEventListener('change', handleInlineEdit);
                     const driSel=document.createElement('select'); driSel.className='inline-select'; driSel.dataset.field='dri'; renderUserSelectOptions(driSel, task.dri, true); driSel.addEventListener('change', handleInlineEdit);
                     const dueDateInput=document.createElement('input'); dueDateInput.type='date'; dueDateInput.className='inline-date'; dueDateInput.value=task.dueDate || ''; dueDateInput.dataset.field='dueDate'; dueDateInput.addEventListener('change', handleInlineEdit);
-
-                    // Timestamp cell
                     const updatedCell = document.createElement('td'); updatedCell.className = 'timestamp-cell'; const ts=formatTimestamp(task.lastUpdatedTimestamp); const by=task.lastUpdatedBy||'?'; updatedCell.innerHTML=`${ts}<br>by ${by}`; updatedCell.title=`By ${by} on ${ts}`;
-
-                    // Drive Folder Button (Static Text)
                     const driveCell = document.createElement('td'); driveCell.className = 'drive-link-cell';
-                    if(task.driveFolderLink){
-                        const driveButton=document.createElement('button');
-                        driveButton.textContent='Open'; // Always "Open"
-                        driveButton.dataset.folderUrl = task.driveFolderLink;
-                        driveButton.onclick = () => window.open(task.driveFolderLink, '_blank');
-                        driveCell.appendChild(driveButton);
-                    } else { const span=document.createElement('span'); span.textContent='N/A'; driveCell.appendChild(span); }
-
-                    // Actions cell
-                    const actionsCell = document.createElement('td'); const actsDiv=document.createElement('div'); actsDiv.className='flex gap-1 items-center justify-end'; const editBtn=document.createElement('button'); editBtn.innerHTML=`<svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>`; editBtn.className='text-yellow-600 hover:text-yellow-800 p-1 rounded focus:outline-none focus:ring-1 ring-yellow-500'; editBtn.title=`Task Files / Actions`; editBtn.onclick=()=>openEditModal(task.id); const compBtn=document.createElement('button'); compBtn.textContent=task.completed?'Undo':'Done'; compBtn.className=`text-white px-2 py-1 rounded text-xs font-medium ${task.completed?'bg-yellow-500 hover:bg-yellow-600':'bg-green-500 hover:bg-green-600'}`; compBtn.title=`Mark ${task.completed?'incomplete':'complete'}`; compBtn.onclick=()=>handleToggleTaskComplete(task.id, !task.completed); const delBtn=document.createElement('button'); delBtn.textContent='Delete'; delBtn.className='bg-red-500 text-white px-2 py-1 rounded text-xs font-medium hover:bg-red-600'; delBtn.title=`Delete task`; delBtn.onclick=()=>handleDeleteTask(task.id, task.name); actsDiv.append(editBtn, compBtn, delBtn); actionsCell.appendChild(actsDiv);
-
-                    // Append cells
-                    tr.append(
-                        createCell(nameSpan, 'task-name-col'), createCell(groupSel, 'group-col'), createCell(statusSel),
-                        createCell(task.creator||'?'), createCell(formatTimestamp(task.createdTimestamp), 'timestamp-cell'),
-                        createCell(dueDateInput), createCell(driSel), updatedCell, driveCell, actionsCell
-                    );
+                    if(task.driveFolderLink){ const driveButton=document.createElement('button'); driveButton.textContent='Open'; driveButton.dataset.folderUrl = task.driveFolderLink; driveButton.onclick = () => window.open(task.driveFolderLink, '_blank'); driveCell.appendChild(driveButton); } else { const span=document.createElement('span'); span.textContent='N/A'; driveCell.appendChild(span); }
+                    const actionsCell = document.createElement('td'); const actsDiv=document.createElement('div'); actsDiv.className='flex gap-1 items-center justify-end';
+                    const detailsBtn=document.createElement('button'); detailsBtn.innerHTML=`<svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>`; detailsBtn.className='text-yellow-600 hover:text-yellow-800 p-1 rounded focus:outline-none focus:ring-1 ring-yellow-500'; detailsBtn.title=`Task Details / Files / Comments`; detailsBtn.onclick=()=>openEditModal(task.id);
+                    const compBtn=document.createElement('button'); compBtn.textContent=task.completed?'Undo':'Done'; compBtn.className=`text-white px-2 py-1 rounded text-xs font-medium ${task.completed?'bg-yellow-500 hover:bg-yellow-600':'bg-green-500 hover:bg-green-600'}`; compBtn.title=`Mark ${task.completed?'incomplete':'complete'}`; compBtn.onclick=()=>handleToggleTaskComplete(task.id, !task.completed); const delBtn=document.createElement('button'); delBtn.textContent='Delete'; delBtn.className='bg-red-500 text-white px-2 py-1 rounded text-xs font-medium hover:bg-red-600'; delBtn.title=`Delete task`; delBtn.onclick=()=>handleDeleteTask(task.id, task.name);
+                    actsDiv.append(detailsBtn, compBtn, delBtn); actionsCell.appendChild(actsDiv);
+                    tr.append( createCell(nameSpan, 'task-name-col'), createCell(groupSel, 'group-col'), createCell(statusSel), createCell(task.creator||'?'), createCell(formatTimestamp(task.createdTimestamp), 'timestamp-cell'), createCell(dueDateInput), createCell(driSel), updatedCell, driveCell, actionsCell );
                     taskTableBody.appendChild(tr);
                 });
             }
         }
 
-
+        // Weekly Calendar Rendering
         function renderWeeklyCalendarView(tasksSource) {
             calendarDaysContainer.innerHTML = '';
             calendarLoadingIndicator.classList.add('hidden');
-            const today = new Date();
-            const startOfWeek = getStartOfWeek(today);
-            const endOfWeek = new Date(startOfWeek);
-            endOfWeek.setDate(startOfWeek.getDate() + 13);
-            const weekNum = getWeekNumber(today);
-            calendarWeekNumDisplay.textContent = `Week ${weekNum}`;
-            calendarWeekTitle.textContent = `${formatDateForDisplay(startOfWeek)} - ${formatDateForDisplay(endOfWeek, { month: 'short', day: 'numeric', year: 'numeric' })}`;
-
+            const today = new Date(); const startOfWeek = getStartOfWeek(today); const endOfWeek = new Date(startOfWeek); endOfWeek.setDate(startOfWeek.getDate() + 13); const weekNum = getWeekNumber(today); calendarWeekNumDisplay.textContent = `Week ${weekNum}`; calendarWeekTitle.textContent = `${formatDateForDisplay(startOfWeek)} - ${formatDateForDisplay(endOfWeek, { month: 'short', day: 'numeric', year: 'numeric' })}`;
             const outstandingTasksDuePerDay = {};
-            tasksSource.forEach(t => {
-                if (!t.completed) {
-                    const due = getLocalDate(t.dueDate);
-                    if (due && due >= startOfWeek && due <= endOfWeek) {
-                        const ds = formatDateToYMD(due);
-                        outstandingTasksDuePerDay[ds] = (outstandingTasksDuePerDay[ds] || 0) + 1;
-                    }
-                }
-            });
-
-            for (let i = 0; i < 14; i++) {
-                const dayDate = new Date(startOfWeek);
-                dayDate.setDate(startOfWeek.getDate() + i);
-                const ds = formatDateToYMD(dayDate);
-                const count = outstandingTasksDuePerDay[ds] || 0;
-                const box = document.createElement('div');
-                box.className = 'calendar-day-box';
-                let seeTasksButtonHTML = '';
-                if (count > 0) {
-                    seeTasksButtonHTML = `<button class="see-tasks-btn text-xs" data-date="${ds}" data-date-display="${formatDateForDisplay(dayDate)}">See Tasks</button>`;
-                }
-                box.innerHTML = `
-                    <span class="calendar-day-name">${formatDateForDisplay(dayDate, { weekday: 'short' })}, ${dayDate.getDate()}</span>
-                    <span class="calendar-day-count">${count}</span>
-                    ${seeTasksButtonHTML}
-                `;
-                calendarDaysContainer.appendChild(box);
-            }
+            tasksSource.forEach(t => { if (!t.completed) { const due = getLocalDate(t.dueDate); if (due && due >= startOfWeek && due <= endOfWeek) { const ds = formatDateToYMD(due); outstandingTasksDuePerDay[ds] = (outstandingTasksDuePerDay[ds] || 0) + 1; } } });
+            for (let i = 0; i < 14; i++) { const dayDate = new Date(startOfWeek); dayDate.setDate(startOfWeek.getDate() + i); const ds = formatDateToYMD(dayDate); const count = outstandingTasksDuePerDay[ds] || 0; const box = document.createElement('div'); box.className = 'calendar-day-box'; let seeTasksButtonHTML = ''; if (count > 0) { seeTasksButtonHTML = `<button class="see-tasks-btn text-xs" data-date="${ds}" data-date-display="${formatDateForDisplay(dayDate)}">See Tasks</button>`; } box.innerHTML = ` <span class="calendar-day-name">${formatDateForDisplay(dayDate, { weekday: 'short' })}, ${dayDate.getDate()}</span> <span class="calendar-day-count">${count}</span> ${seeTasksButtonHTML} `; calendarDaysContainer.appendChild(box); }
         }
 
-        // Calendar Graph (remains line chart)
+        // Calendar Graph
         function renderCalendarGraph(tasksSource) { chartLoadingIndicator.classList.add('hidden'); calendarChartCanvas.classList.remove('hidden'); const ctx = calendarChartCanvas.getContext('2d'); const weekStart = getStartOfWeek(currentCalendarDate); const labels = []; const dataCounts = []; const tasksDuePerDay = {}; tasksSource.forEach(t => { const due=getLocalDate(t.dueDate); if(due && due >= weekStart && due < new Date(weekStart).setDate(weekStart.getDate() + 7)) { const ds=formatDateToYMD(due); tasksDuePerDay[ds] = (tasksDuePerDay[ds] || 0) + 1; } }); for (let i = 0; i < 7; i++) { const d = new Date(weekStart); d.setDate(weekStart.getDate() + i); const ds = formatDateToYMD(d); labels.push(formatDateForDisplay(d, { weekday: 'short', day: 'numeric' })); dataCounts.push(tasksDuePerDay[ds] || 0); } if (calendarChartInstance) { calendarChartInstance.destroy(); } calendarChartInstance = new Chart(ctx, { type: 'line', data: { labels: labels, datasets: [{ label: 'Tasks Due', data: dataCounts, borderColor: 'rgba(59, 130, 246, 1)', backgroundColor: 'rgba(59, 130, 246, 0.2)', tension: 0.1, fill: true }] }, options: { scales: { y: { beginAtZero: true, ticks: { stepSize: 1 } } }, responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, title: { display: false } } } }); }
 
-         // File List Rendering (includes type)
+        // File List Rendering
          function renderFileList(files) { driveFileList.innerHTML = ''; if (!files || files.length === 0) { driveFileList.innerHTML = `<span class="text-gray-500 italic p-2 block">No files found in folder.</span>`; return; } files.forEach(file => { const fileDiv = document.createElement('div'); const link = document.createElement('a'); link.href = file.url; link.textContent = file.name; link.target = '_blank'; link.rel = 'noopener noreferrer'; link.title = `Open ${file.name}`; const typeSpan = document.createElement('span'); typeSpan.className = 'file-type'; typeSpan.textContent = getFileTypeDisplay(file.mimeType); const sizeSpan = document.createElement('span'); sizeSpan.className = 'file-size'; sizeSpan.textContent = file.size; fileDiv.appendChild(link); fileDiv.appendChild(typeSpan); fileDiv.appendChild(sizeSpan); driveFileList.appendChild(fileDiv); }); }
 
-        // UPDATED: Render All Orchestrator (Handles completed filter)
+        // Comment List Rendering
+        function renderComments(comments) {
+            commentList.innerHTML = '';
+            if (!comments || comments.length === 0) { commentList.innerHTML = `<p class="text-gray-500 italic p-2 block">No comments yet.</p>`; return; }
+            comments.forEach(comment => { const item = document.createElement('div'); item.className = 'comment-item'; const meta = document.createElement('div'); meta.className = 'comment-meta'; const userSpan = document.createElement('span'); userSpan.className = 'comment-user'; userSpan.textContent = comment.user || 'Unknown User'; const timeSpan = document.createElement('span'); timeSpan.textContent = ` - ${formatTimestamp(comment.createdTimestamp)}`; meta.appendChild(userSpan); meta.appendChild(timeSpan); const text = document.createElement('div'); text.className = 'comment-text'; text.textContent = comment.comment || ''; item.appendChild(meta); item.appendChild(text); commentList.appendChild(item); });
+            commentList.scrollTop = commentList.scrollHeight;
+        }
+
+        // Render All Orchestrator
         function renderAll() {
-            updateCurrentUserDisplay();
-            renderGroupOptions(); renderStatusOptions(); renderUserSelectOptions(driInput, currentUser, true); renderUserOptions();
-
-            // Update toggle button text
-            if(toggleCompletedBtn) {
-                toggleCompletedBtn.textContent = showCompletedTasks ? 'Hide Completed' : 'Show Completed';
-            }
-
-            // 1. Base tasks
-            const baseTasks = tasks;
-            let filteredTasks = [];
-            let tableTitle = '';
-
-            // 2. Apply Primary Filter
-            if (activeFilter.type) { /* ... existing filter logic ... */
-                const actualTodayStart = getStartOfDay(new Date()); const selectedTodayStart = getStartOfDay(currentCalendarDate); const selectedWeekStart = getStartOfWeek(currentCalendarDate); const selectedWeekEnd = new Date(selectedWeekStart); selectedWeekEnd.setDate(selectedWeekEnd.getDate() + 7);
-                switch(activeFilter.type) {
-                    case 'today': filteredTasks = baseTasks.filter(t => t.dueDate === formatDateToYMD(selectedTodayStart)); break;
-                    case 'week': filteredTasks = baseTasks.filter(t => { const due=getLocalDate(t.dueDate); return due && due >= selectedWeekStart && due < selectedWeekEnd; }); break;
-                    case 'day': filteredTasks = baseTasks.filter(t => t.dueDate === activeFilter.date); break;
-                    case 'overdue': filteredTasks = baseTasks.filter(t => !t.completed && getLocalDate(t.dueDate) && getLocalDate(t.dueDate) < actualTodayStart); break;
-                    case 'outstanding': filteredTasks = baseTasks.filter(t => !t.completed); break;
-                    default: filteredTasks = baseTasks; break;
-                }
-                tableTitle = activeFilter.description; clearTaskFilterBtn.classList.remove('hidden'); viewMyTasksBtn.classList.remove('active'); viewAllTasksBtn.classList.remove('active');
-            } else { /* ... existing My/All view logic ... */
-                filteredTasks = baseTasks.filter(t => currentView === 'all' || t.dri === currentUser); tableTitle = currentView === 'my' ? `My Tasks (${currentUser || '...'})` : 'All Tasks'; clearTaskFilterBtn.classList.add('hidden'); viewMyTasksBtn.classList.toggle('active', currentView === 'my'); viewAllTasksBtn.classList.toggle('active', currentView === 'all');
-            }
-
-            // 3. Apply Secondary Text Search Filter
-            const searchTerm = tableSearchInput.value.trim().toLowerCase();
-            let searchedTasks = filteredTasks;
-            if (searchTerm) {
-                searchedTasks = filteredTasks.filter(task => (task.name && task.name.toLowerCase().includes(searchTerm)) || (task.group && task.group.toLowerCase().includes(searchTerm)) || (task.status && task.status.toLowerCase().includes(searchTerm)) || (task.creator && task.creator.toLowerCase().includes(searchTerm)) || (task.dri && task.dri.toLowerCase().includes(searchTerm)));
-                tableTitle += ` matching "${searchTerm}"`;
-            }
-
-            // 4. Apply Completed Task Filter (NEW STEP)
-            let tasksToDisplay = searchedTasks;
-            if (!showCompletedTasks) {
-                tasksToDisplay = searchedTasks.filter(task => !task.completed);
-                 // Optionally add info to title if hiding completed tasks
-                 if (tableTitle.includes("matching")) {
-                     tableTitle += " (Incomplete)";
-                 } else if (activeFilter.type) {
-                     tableTitle += " (Incomplete)";
-                 } else {
-                     tableTitle += " (Incomplete)";
-                 }
-            } else {
-                 tableTitle += " (incl. Completed)";
-            }
-
-
-            // 5. Apply Sorting
+            updateCurrentUserDisplay(); renderGroupOptions(); renderStatusOptions(); renderUserSelectOptions(driInput, currentUser, true); renderUserOptions();
+            if(toggleCompletedBtn) { toggleCompletedBtn.textContent = showCompletedTasks ? 'Hide Completed' : 'Show Completed'; }
+            const baseTasks = tasks; let filteredTasks = []; let tableTitle = '';
+            if (activeFilter.type) { const actualTodayStart = getStartOfDay(new Date()); const selectedTodayStart = getStartOfDay(currentCalendarDate); const selectedWeekStart = getStartOfWeek(currentCalendarDate); const selectedWeekEnd = new Date(selectedWeekStart); selectedWeekEnd.setDate(selectedWeekEnd.getDate() + 7); switch(activeFilter.type) { case 'today': filteredTasks = baseTasks.filter(t => t.dueDate === formatDateToYMD(selectedTodayStart)); break; case 'week': filteredTasks = baseTasks.filter(t => { const due=getLocalDate(t.dueDate); return due && due >= selectedWeekStart && due < selectedWeekEnd; }); break; case 'day': filteredTasks = baseTasks.filter(t => t.dueDate === activeFilter.date); break; case 'overdue': filteredTasks = baseTasks.filter(t => !t.completed && getLocalDate(t.dueDate) && getLocalDate(t.dueDate) < actualTodayStart); break; case 'outstanding': filteredTasks = baseTasks.filter(t => !t.completed); break; default: filteredTasks = baseTasks; break; } tableTitle = activeFilter.description; clearTaskFilterBtn.classList.remove('hidden'); viewMyTasksBtn.classList.remove('active'); viewAllTasksBtn.classList.remove('active'); }
+            else { filteredTasks = baseTasks.filter(t => currentView === 'all' || t.dri === currentUser); tableTitle = currentView === 'my' ? `My Tasks (${currentUser || '...'})` : 'All Tasks'; clearTaskFilterBtn.classList.add('hidden'); viewMyTasksBtn.classList.toggle('active', currentView === 'my'); viewAllTasksBtn.classList.toggle('active', currentView === 'all'); }
+            const searchTerm = tableSearchInput.value.trim().toLowerCase(); let searchedTasks = filteredTasks; if (searchTerm) { searchedTasks = filteredTasks.filter(task => (task.name && task.name.toLowerCase().includes(searchTerm)) || (task.group && task.group.toLowerCase().includes(searchTerm)) || (task.status && task.status.toLowerCase().includes(searchTerm)) || (task.creator && task.creator.toLowerCase().includes(searchTerm)) || (task.dri && task.dri.toLowerCase().includes(searchTerm))); tableTitle += ` matching "${searchTerm}"`; }
+            let tasksToDisplay = searchedTasks; if (!showCompletedTasks) { tasksToDisplay = searchedTasks.filter(task => !task.completed); if (tableTitle.includes("matching") || activeFilter.type) { tableTitle += " (Incomplete)"; } else { tableTitle += " (Incomplete)"; } } else { tableTitle += " (incl. Completed)"; }
             const sortedTasks = applySorting(tasksToDisplay);
-
-            // 6. Update UI
             if (currentViewTitle) currentViewTitle.textContent = tableTitle;
-            renderTasks(sortedTasks);
-            renderCalendarGraph(tasks);
-            renderWeeklyCalendarView(tasks);
-            updateSummaryTiles(tasks, currentCalendarDate);
+            renderTasks(sortedTasks); renderCalendarGraph(tasks); renderWeeklyCalendarView(tasks); updateSummaryTiles(tasks, currentCalendarDate);
         }
 
         // --- Sorting Logic ---
-        // getComparisonValue and applySorting remain the same
         function getComparisonValue(task, column) { const value = task[column] || ''; switch (column) { case 'name': case 'group': case 'status': case 'creator': case 'dri': return String(value).toLowerCase(); case 'createdTimestamp': case 'lastUpdatedTimestamp': return value ? new Date(value).getTime() : 0; case 'dueDate': return value ? new Date(value+'T00:00:00').getTime() : (currentSort.direction === 'asc' ? Infinity : 0); case 'order': return Number(value) || 0; case 'completed': return value ? 1 : 0; default: return String(value).toLowerCase(); } }
         function applySorting(tasksToSort) { if (!currentSort.column || !tasksToSort) return tasksToSort; const modifier = currentSort.direction === 'asc' ? 1 : -1; return tasksToSort.slice().sort((a, b) => { const valA = getComparisonValue(a, currentSort.column); const valB = getComparisonValue(b, currentSort.column); if (valA < valB) return -1 * modifier; if (valA > valB) return 1 * modifier; if(currentSort.column !== 'name') { const nameA = String(a.name || '').toLowerCase(); const nameB = String(b.name || '').toLowerCase(); if (nameA < nameB) return -1; if (nameA > nameB) return 1; } return 0; }); }
 
-
         // --- Event Handlers ---
         // Task Form Submit
-        taskForm.addEventListener('submit', async (e) => { e.preventDefault(); const name=taskInput.value.trim(); const group=groupSelect.value; const status=statusInput.value; const dueDate=dueDateInput.value; const dri=driInput.value; if (!name || !dueDate || !status || !dri) { alert('Task Name, Status, Due Date, and DRI required.'); return; } if (!currentUser) { alert('Please select user profile.'); openUserModal(); return; } const newTaskData = { name, group, status, dueDate, dri }; try { const added = await apiAddTask(newTaskData); if (added?.id) { tasks.push(added); renderAll(); taskInput.value = ''; renderGroupOptions(groupSelect, true, group); renderStatusOptions(statusInput, true, status); renderUserSelectOptions(driInput, dri, true); } else { throw new Error("Task added, no valid data return."); } } catch (error) { alert(`Failed add task: ${error.message}`); } });
+        taskForm.addEventListener('submit', async (e) => { e.preventDefault(); const name=taskInput.value.trim(); const group=groupSelect.value; const status=statusInput.value; const dueDate=dueDateInput.value; const dri=driInput.value; if (!name || !dueDate || !status || !dri) { alert('Task Name, Status, Due Date, and DRI required.'); return; } if (!currentUser) { alert('Please select user profile first.'); openUserModal(); return; } const newTaskData = { name, group, status, dueDate, dri }; try { const added = await apiAddTask(newTaskData); if (added?.id) { tasks.push(added); renderAll(); taskInput.value = ''; renderGroupOptions(groupSelect, true, group); renderStatusOptions(statusInput, true, status); renderUserSelectOptions(driInput, dri, true); } else { throw new Error("Task added, no valid data return."); } } catch (error) { alert(`Failed add task: ${error.message}`); } });
 
         // Inline Edit
         async function handleInlineEdit(event) { const target = event.target; const tr = target.closest('tr'); if (!tr) return; const taskId = tr.dataset.id; const field = target.dataset.field; if (!taskId || !field) return; let value; if (target.tagName === 'SPAN' && target.isContentEditable) { value = target.textContent.trim(); } else if (target.tagName === 'SELECT' || target.tagName === 'INPUT') { value = target.value; } else return; const taskIndex = tasks.findIndex(t => t.id === taskId); if (taskIndex === -1) return; const originalValue = tasks[taskIndex][field]; if (field === 'dueDate' && value !== '' && !/^\d{4}-\d{2}-\d{2}$/.test(value)) { alert("Invalid date format."); target.value = originalValue; return; } if (String(value ?? '') === String(originalValue ?? '')) return; const oldTaskState = { ...tasks[taskIndex] }; tasks[taskIndex][field] = value; try { const updatedTaskData = await apiUpdateTask(taskId, { [field]: value }); if (updatedTaskData?.id === taskId) { Object.assign(tasks[taskIndex], updatedTaskData); } else { tasks[taskIndex].lastUpdatedTimestamp = new Date().toISOString(); tasks[taskIndex].lastUpdatedBy = currentUser; } renderAll(); } catch (error) { tasks[taskIndex] = oldTaskState; if(field === 'dueDate') target.value = oldTaskState.dueDate; renderAll(); alert(`Failed save ${field}: ${error.message}`); } }
 
-        // Group/Status/User Mgmt Handlers (remain the same)
+        // Group/Status/User Mgmt Handlers
         const openGroupModal = () => { renderModalGroups(); newGroupInput.value = ''; groupModal.classList.remove('hidden'); newGroupInput.focus(); }; const closeGroupModal = () => { groupModal.classList.add('hidden'); if (groupSelect.value === '__manage_group') renderGroupOptions(); }; groupSelect.addEventListener('change', (e) => { if (e.target.value === '__manage_group') openGroupModal(); }); const handleAddGroup = async () => { const name=newGroupInput.value.trim(); if(!name || groups.some(g=>g.toLowerCase()===name.toLowerCase())) return; try { const r = await apiAddGroup(name); groups.push(r.name); groups.sort((a,b)=>a.toLowerCase().localeCompare(b.toLowerCase())); renderGroupOptions(); renderModalGroups(); renderAll(); newGroupInput.value = ''; } catch (e) { alert(`Err add group: ${e.message}`); } }; addGroupBtn.addEventListener('click', handleAddGroup); newGroupInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') handleAddGroup(); }); const handleRemoveGroup = async (name) => { if (!confirm(`Delete group "${name}"?`)) return; try { await apiDeleteGroup(name); groups = groups.filter(g => g.toLowerCase() !== name.toLowerCase()); tasks.forEach(t => { if (t.group?.toLowerCase() === name.toLowerCase()) t.group = ''; }); if (defaultGroup === name) { defaultGroup = ''; localStorage.removeItem('defaultGroup'); } renderGroupOptions(); renderModalGroups(); renderAll(); } catch (e) { alert(`Err delete group: ${e.message}`); } }; const handleSetDefaultGroup = (name) => { if (groups.includes(name) || name === '') { defaultGroup = name; localStorage.setItem('defaultGroup', name); renderModalGroups(); renderGroupOptions(); } }; closeGroupModalBtn.addEventListener('click', closeGroupModal); groupModal.addEventListener('click', (e) => { if (e.target === groupModal) closeGroupModal(); });
         const openStatusModal = () => { renderModalStatuses(); newStatusInput.value = ''; statusModal.classList.remove('hidden'); newStatusInput.focus(); }; const closeStatusModal = () => { statusModal.classList.add('hidden'); if (statusInput.value === '__manage_status') renderStatusOptions(); }; statusInput.addEventListener('change', (e) => { if (e.target.value === '__manage_status') openStatusModal(); }); const handleAddStatus = async () => { const name=newStatusInput.value.trim(); if (!name || statuses.some(s=>s.toLowerCase()===name.toLowerCase())) return; try { const r = await apiAddStatus(name); statuses.push(r.name); statuses.sort((a,b)=>a.toLowerCase().localeCompare(b.toLowerCase())); renderStatusOptions(); renderModalStatuses(); renderAll(); newStatusInput.value = ''; } catch (e) { alert(`Err add status: ${e.message}`); } }; addStatusBtn.addEventListener('click', handleAddStatus); newStatusInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') handleAddStatus(); }); const handleRemoveStatus = async (name) => { if (!confirm(`Delete status "${name}"?`)) return; try { await apiDeleteStatus(name); statuses = statuses.filter(s => s.toLowerCase() !== name.toLowerCase()); tasks.forEach(t => { if (t.status?.toLowerCase() === name.toLowerCase()) t.status = ''; }); if (defaultStatus === name) { defaultStatus = ''; localStorage.removeItem('defaultStatus'); } renderStatusOptions(); renderModalStatuses(); renderAll(); } catch (e) { alert(`Err delete status: ${e.message}`); } }; const handleSetDefaultStatus = (name) => { if (statuses.includes(name)) { defaultStatus = name; localStorage.setItem('defaultStatus', name); renderModalStatuses(); renderStatusOptions(); } }; closeStatusModalBtn.addEventListener('click', closeStatusModal); statusModal.addEventListener('click', (e) => { if (e.target === statusModal) closeStatusModal(); });
-        const openUserModal = () => { renderUserOptions(); newUserInput.value = ''; userModal.classList.remove('hidden'); userSelect.focus(); }; const closeUserModal = () => userModal.classList.add('hidden'); const handleAddUser = async () => { const name=newUserInput.value.trim(); if (!name || users.some(u=>u.toLowerCase()===name.toLowerCase())) return; try { const r = await apiAddUser(name); users.push(r.name); users.sort((a,b)=>a.toLowerCase().localeCompare(b.toLowerCase())); renderUserOptions(); renderUserSelectOptions(driInput, driInput.value, true); renderAll(); userSelect.value = name; newUserInput.value = ''; } catch (e) { alert(`Err add user: ${e.message}`); } }; addUserBtn.addEventListener('click', handleAddUser); newUserInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') handleAddUser(); }); setUserBtn.addEventListener('click', () => { const user=userSelect.value; if (user && users.includes(user)) { currentUser = user; localStorage.setItem('currentUser', currentUser); updateCurrentUserDisplay(); renderUserSelectOptions(driInput, currentUser, true); closeUserModal(); renderAll(); } else { alert("Select valid user."); } }); profileBtn.addEventListener('click', openUserModal); userModal.addEventListener('click', (e) => { if (e.target === userModal) closeUserModal(); });
+        const openUserModal = () => { renderUserOptions(); newUserInput.value = ''; userModal.classList.remove('hidden'); userSelect.focus(); }; const closeUserModal = () => userModal.classList.add('hidden'); const handleAddUser = async () => { const name=newUserInput.value.trim(); if (!name || users.some(u=>u.toLowerCase()===name.toLowerCase())) return; try { const r = await apiAddUser(name); users.push(r.name); users.sort((a,b)=>a.toLowerCase().localeCompare(b.toLowerCase())); renderUserOptions(); renderUserSelectOptions(driInput, driInput.value, true); renderAll(); userSelect.value = name; newUserInput.value = ''; } catch (e) { alert(`Err add user: ${e.message}`); } }; addUserBtn.addEventListener('click', handleAddUser); newUserInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') handleAddUser(); });
+        // --- Set User Button Listener (Handles saving to localStorage) ---
+        setUserBtn.addEventListener('click', () => { const selectedUser = userSelect.value; if (selectedUser && users.includes(selectedUser)) { currentUser = selectedUser; localStorage.setItem('currentUser', currentUser); // <<< Save to localStorage
+        updateCurrentUserDisplay(); renderUserSelectOptions(driInput, currentUser, true); closeUserModal(); renderAll(); } else { alert("Please select a valid user from the list."); } });
+        profileBtn.addEventListener('click', openUserModal); userModal.addEventListener('click', (e) => { if (e.target === userModal) closeUserModal(); });
 
-
-        // Edit Task Modal Logic (Simplified)
-        async function openEditModal(taskId) { const task = tasks.find(t => t.id === taskId); if (!task) return; editTaskIdInput.value = task.id; editModalTaskName.textContent = task.name; editTaskNameHidden.value = task.name; driveFileList.innerHTML = '<span class="text-gray-500 italic p-2 block">Loading files...</span>'; updateDriveLinkDisplay(task.driveFolderLink); let folderId = null; if (task.driveFolderLink && task.driveFolderLink.includes('/folders/')) { try { folderId = task.driveFolderLink.split('/folders/')[1].split('?')[0]; } catch(e){ console.error("Err parse folderId", e);} } editTaskFolderIdInput.value = folderId || ''; editTaskModal.classList.remove('hidden'); if (folderId) { try { const files = await apiGetFolderFiles(folderId); renderFileList(files); } catch (error) { console.error(`Failed fetch files ${folderId}:`, error); driveFileList.innerHTML = `<span class="text-red-500 italic p-2 block">Err files: ${error.message}</span>`; } } else { renderFileList(null); } }
-        function closeEditModal() { editTaskModal.classList.add('hidden'); }
+        // Edit Task Modal Logic
+        async function openEditModal(taskId) { const task = tasks.find(t => t.id === taskId); if (!task) return; editTaskIdInput.value = task.id; editModalTaskName.textContent = task.name; editTaskNameHidden.value = task.name; driveFileList.innerHTML = '<span class="text-gray-500 italic p-2 block">Loading files...</span>'; commentList.innerHTML = '<span class="text-gray-500 italic p-2 block">Loading comments...</span>'; newCommentInput.value = ''; updateDriveLinkDisplay(task.driveFolderLink); let folderId = null; if (task.driveFolderLink && task.driveFolderLink.includes('/folders/')) { try { folderId = task.driveFolderLink.split('/folders/')[1].split('?')[0]; } catch(e){ console.error("Err parse folderId", e); } } editTaskFolderIdInput.value = folderId || ''; editTaskModal.classList.remove('hidden'); const filePromise = folderId ? apiGetFolderFiles(folderId) : Promise.resolve([]); const commentPromise = apiGetComments(taskId); try { const files = await filePromise; renderFileList(files); } catch (error) { console.error(`Failed fetch files for folder ${folderId}:`, error); driveFileList.innerHTML = `<span class="text-red-500 italic p-2 block">Error loading files: ${error.message}</span>`; } try { currentComments = await commentPromise; renderComments(currentComments); } catch (error) { console.error(`Failed fetch comments for task ${taskId}:`, error); commentList.innerHTML = `<span class="text-red-500 italic p-2 block">Error loading comments: ${error.message}</span>`; } }
+        function closeEditModal() { editTaskModal.classList.add('hidden'); currentComments = []; }
         cancelEditBtn.addEventListener('click', closeEditModal);
         editTaskModal.addEventListener('click', (e) => { if (e.target === editTaskModal) closeEditModal(); });
 
-        // Drive Folder Button Handler (remains the same)
+        // Drive Folder Button Handler
         driveFolderBtn.addEventListener('click', async () => { const taskId=editTaskIdInput.value; const taskName=editTaskNameHidden.value || 'Task'; if(!taskId) return; driveFolderBtn.textContent = 'Processing...'; driveFolderBtn.disabled = true; let folderId = editTaskFolderIdInput.value; try { const result = await apiGetOrCreateFolder(taskId, taskName); if (!result?.folderUrl || !result?.folderId) throw new Error("Failed get folder details."); folderId = result.folderId; editTaskFolderIdInput.value = folderId; const taskIndex = tasks.findIndex(t => t.id === taskId); let linkUpdated = false; if (taskIndex !== -1 && tasks[taskIndex].driveFolderLink !== result.folderUrl) { try { await apiUpdateTask(taskId, { driveFolderLink: result.folderUrl }); tasks[taskIndex].driveFolderLink = result.folderUrl; linkUpdated = true; } catch (updateError) { console.error("Err save link:", updateError); } } updateDriveLinkDisplay(result.folderUrl); driveFileList.innerHTML = '<span class="text-gray-500 italic p-2 block">Loading files...</span>'; try { const files = await apiGetFolderFiles(folderId); renderFileList(files); } catch (fetchError) { console.error(`Err fetch files ${folderId}:`, fetchError); driveFileList.innerHTML = `<span class="text-red-500 italic p-2 block">Err files: ${fetchError.message}</span>`; } window.open(result.folderUrl, '_blank'); if(linkUpdated) { renderAll(); } } catch (error) { alert(`Err Drive folder: ${error.message}`); updateDriveLinkDisplay(null); renderFileList(null); } finally { driveFolderBtn.textContent = 'Open / Create Task Folder'; driveFolderBtn.disabled = false; } });
         function updateDriveLinkDisplay(linkUrl) { if (!driveFolderLinkDisplay) return; if (linkUrl) { driveFolderLinkDisplay.innerHTML = `<a href="${linkUrl}" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">${linkUrl}</a>`; } else { driveFolderLinkDisplay.innerHTML = `<span class="text-gray-500 italic">No folder linked.</span>`; editTaskFolderIdInput.value = ''; } }
 
+        // Add Comment Form Handler
+        addCommentForm.addEventListener('submit', async (e) => {
+            e.preventDefault(); const taskId = editTaskIdInput.value; const commentText = newCommentInput.value.trim();
+            if (!taskId || !commentText || !currentUser) { alert("Cannot add comment. Task ID, comment text, and current user are required."); return; }
+            addCommentBtn.disabled = true; newCommentInput.disabled = true; addCommentBtn.textContent = 'Adding...';
+            try { const addedComment = await apiAddComment(taskId, commentText); if (addedComment && addedComment.taskId === taskId) { currentComments.push(addedComment); renderComments(currentComments); newCommentInput.value = ''; } else { console.warn("Backend didn't return added comment, re-fetching."); currentComments = await apiGetComments(taskId); renderComments(currentComments); newCommentInput.value = ''; } } catch (error) { alert(`Failed to add comment: ${error.message}`); } finally { addCommentBtn.disabled = false; newCommentInput.disabled = false; addCommentBtn.textContent = 'Add'; newCommentInput.focus(); }
+        });
+
         // Task Actions (Toggle, Delete)
         const handleToggleTaskComplete = async (taskId, completed) => { const idx = tasks.findIndex(t => t.id === taskId); if (idx === -1) return; const old=tasks[idx].completed; tasks[idx].completed = completed; renderAll(); try { const r = await apiUpdateTask(taskId, { completed: completed }); if (r?.id === taskId) Object.assign(tasks[idx], r); else { tasks[idx].lastUpdatedTimestamp = new Date().toISOString(); tasks[idx].lastUpdatedBy = currentUser; } renderAll(); } catch (e) { tasks[idx].completed = old; renderAll(); alert(`Err update complete: ${e.message}`); } };
-        const handleDeleteTask = async (taskId, name) => { if (!confirm(`Delete "${name}"?`)) return; const idx = tasks.findIndex(t => t.id === taskId); if (idx === -1) return; const removed = tasks.splice(idx, 1)[0]; renderAll(); try { await apiDeleteTask(taskId); } catch (e) { tasks.splice(idx, 0, removed); renderAll(); alert(`Err delete task: ${e.message}`); } };
+        const handleDeleteTask = async (taskId, name) => { if (!confirm(`Delete "${name}"? This will also delete associated comments.`)) return; const idx = tasks.findIndex(t => t.id === taskId); if (idx === -1) return; const removed = tasks.splice(idx, 1)[0]; renderAll(); try { await apiDeleteTask(taskId); } catch (e) { tasks.splice(idx, 0, removed); renderAll(); alert(`Err delete task: ${e.message}`); } };
 
         // View Toggle
         function handleViewChange(event) { const view=event.target.dataset.view; if (view && view !== currentView) { currentView = view; localStorage.setItem('currentView', currentView); activeFilter = { type: null, date: null, description: 'All Tasks' }; renderAll(); } }
@@ -512,23 +465,44 @@
          // Table Sort Handler
          taskTableHeader.addEventListener('click', (event) => { const header = event.target.closest('th[data-sort]'); if (!header) return; const column = header.dataset.sort; if (currentSort.column === column) { currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc'; } else { currentSort.column = column; currentSort.direction = 'asc'; } renderAll(); });
 
-         // --- NEW: Toggle Completed Tasks Handler ---
-         toggleCompletedBtn.addEventListener('click', () => {
-             showCompletedTasks = !showCompletedTasks; // Flip the state
-             localStorage.setItem('showCompletedTasks', showCompletedTasks); // Save state
-             renderAll(); // Re-render the table
-         });
+         // Toggle Completed Tasks Handler
+         toggleCompletedBtn.addEventListener('click', () => { showCompletedTasks = !showCompletedTasks; localStorage.setItem('showCompletedTasks', showCompletedTasks); renderAll(); });
 
-         // --- REMOVED Drive Hover Handlers ---
-
-        // Initial Setup
+        // --- Initial Setup ---
         dueDateInput.value = formatDateToYMD(new Date());
         fetchData().then(() => {
-             if (!currentUser && users.length > 0) { openUserModal(); alert("Welcome! Select user profile."); }
-             else if (users.length === 0) { openUserModal(); alert("Welcome! Add user profile."); }
-             updateCurrentUserDisplay(); if(tileTodayDate) tileTodayDate.textContent = formatDateForDisplay(currentCalendarDate);
-             // Initial button text set in renderAll
-         }).catch((err) => { console.error("Init fetch failed:", err); updateCurrentUserDisplay(); });
+             // --- MODIFIED: Check for valid user AFTER fetch completes ---
+             updateCurrentUserDisplay(); // Update display based on loaded/potentially auto-added user
+             if(tileTodayDate) tileTodayDate.textContent = formatDateForDisplay(currentCalendarDate);
+
+             // Check if the loaded currentUser is actually in the fetched user list
+             const storedUserValid = currentUser && users.some(u => u.toLowerCase() === currentUser.toLowerCase());
+
+             if (!storedUserValid) {
+                 console.log("No valid user found in storage or fetched list. Prompting for selection.");
+                 currentUser = ''; // Clear invalid user variable
+                 localStorage.removeItem('currentUser'); // Clear invalid storage
+                 updateCurrentUserDisplay(); // Update display to show "No User Set"
+
+                 if (users.length > 0) {
+                     alert("Welcome! Please select or add your user profile to continue.");
+                     openUserModal(); // Force modal open for selection
+                 } else {
+                     // Edge case: No users exist at all
+                     alert("Welcome! Please add a user profile to begin.");
+                     openUserModal(); // Open modal to allow adding the first user
+                 }
+             } else {
+                 console.log(`User "${currentUser}" loaded successfully.`);
+                 // User is valid, UI is already updated, proceed as normal.
+             }
+             // --- End User Selection Check ---
+
+         }).catch((err) => {
+             console.error("Initial fetch failed:", err);
+             // Display error or handle appropriately, maybe still try to show profile button
+             updateCurrentUserDisplay(); // Show "No User Set" or potentially invalid stored user
+         });
 
     }); // End DOMContentLoaded
     </script>
